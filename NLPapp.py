@@ -29,7 +29,7 @@ def text_analyzer(my_text):
     return allData
 
 def entity_analyzer(my_text):
-    nlp = spacy.load('en')
+    nlp = spacy.load('en_core_web_sm')
     docx = nlp(my_text)
     entities = [(entity.text,entity.label_) for entity in docx.ents ]
     return entities
